@@ -19,7 +19,9 @@ class Base extends Component {
     const url = URL.resolve(api_root, this.api_path());
     SuperAgent
       .get(url)
-      .query({...api_params, api_key})
+      .set('Authorization', ['Bearer', api_key].join(' '))
+      .set('Accept', 'application/vnd.btwb.v1.webwidgets+json')
+      .query(api_params)
       .end((error, httpResponse) => {
         if (error || !httpResponse.ok) {
           this.setState({error, httpResponse});
