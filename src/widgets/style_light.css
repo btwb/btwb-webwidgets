@@ -137,6 +137,7 @@ ul.btwb-result-list li .athlete-image{
   list-style-type:none;
   margin:0px 0px 0px 0px;
   padding:0px 0px 0px 0px;
+  white-space: pre-wrap;
 }
 .btwb-wod-list h5{
   margin:0px 0px 0px 0px;
