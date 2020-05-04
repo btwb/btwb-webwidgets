@@ -108,7 +108,7 @@ class Wods extends Base {
   }
 
   renderWodLinks(wod_entries) {
-    return wod_entries.workout.wod_recent_results.map((links, i) => (
+    return wod_entries.wod_links.map((links, i) => (
       <ul className="btwb-wod-links" key={'links_'+i}>
         <li><a href={links.url} target="_blank">{links.title}</a></li>
       </ul>
