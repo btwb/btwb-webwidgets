@@ -128,9 +128,7 @@ class Wods extends Base {
       : null }
       <p><i>{wod_entries.wod_instructions}</i></p>
       { wod_entries.wod_links.length ?
-        <span>
-          {this.renderWodLinks(wod_entries)}
-        </span>
+          (this.renderWodLinks(wod_entries))
       : null }
       <hr/>
 
@@ -165,9 +163,7 @@ class Wods extends Base {
           <small>Total: {wod_entries.workout.wod_results_count}</small>
             <ul className="btwb-result-list">
               { wod_entries.workout.wod_recent_results.length ?
-                <span>
-                  {this.renderRecentResults(wod_entries)}
-                </span>
+                (this.renderRecentResults(wod_entries))
               : null }
             </ul>
           <hr/>
@@ -182,9 +178,7 @@ class Wods extends Base {
     return this.state.data.wodsets.map((wod_activity,i) => (
       <ul className="btwb-wod-list" key={'wod_activity_' + i}>
         { wod_activity.entries.length ?
-          <span>
-            {this.renderWodEntries(wod_activity)}
-          </span>
+          (this.renderWodEntries(wod_activity))
         : 'Nothing Assigned for This Track for this Date' }
       </ul>
     ));
